@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 5em;
+    background: #123;
+    font-family: sans-serif;
+}
+
+.debug {
+    outline: solid 1px red;
+    outline-offset: -1px;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    
+    &.margin {
+        background: rgba(orange, .2);
+        margin: -.5em;
+
+        > * {
+            margin: .5em;
+        }
+    }
+
+    &.gap {
+        background: rgba(red, .2);
+        gap: 1em;
+    }
+
+    > * {
+        @extend .debug;
+        flex: 1 1 10em;
+        padding: 2em;
+    }
+}
+
+.spacer {
+    height: 3em;
+}
