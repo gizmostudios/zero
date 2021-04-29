@@ -1,18 +1,27 @@
 import gulp from 'gulp';
-import pug from 'gulp-pug-3';
+import pug from 'gulp-pug';
 import server from 'gulp-webserver';
 import livereload from 'gulp-livereload';
 import sass from 'gulp-dart-sass';
 
 const paths = {
 	dist: 'dist',
-	pug: 'src/**/*.pug',
+	pug: {
+		watch: 'src/templates/**/*.pug',
+		src: 'src/templates/*.pug'
+	},
 	scss: 'src/**/*.scss'
 };
 
 gulp.task('pug', () => {
-	return gulp.src(paths.pug)
-		.pipe(pug({}))
+	return gulp.src(paths.pug.src)
+		.pipe(pug({
+			pretty: true,
+			data: {
+				title: 'Zero',
+				author: 'Gizmo'
+			}
+		}))
 		.pipe(gulp.dest(paths.dist))
 		.pipe(livereload());
 });
@@ -34,7 +43,7 @@ gulp.task('server', () => {
 
 gulp.task('watch', () => {
 	livereload.listen();
-	gulp.watch(paths.pug, gulp.series('pug'));
+	gulp.watch(paths.pug.watch, gulp.series('pug'));
 	gulp.watch(paths.scss, gulp.series('scss'));
 });
 

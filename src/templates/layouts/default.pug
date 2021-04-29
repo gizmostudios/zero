@@ -1,0 +1,12 @@
+html
+    head
+        title=title
+        block styles
+            link(rel="stylesheet" href="assets/styles/bundle.css")
+    body
+        block content
+        block footer
+            footer
+                span Made by #{author}
+        block scripts
+            script(src="http://localhost:35729/livereload.js")
