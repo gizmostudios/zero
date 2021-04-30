@@ -3,43 +3,13 @@
 }
 
 body {
-    margin: 0;
-    padding: 5em;
-    background: #123;
-    color: white;
+    background: white;
+    color: black;
     font-family: sans-serif;
+    margin: 0;
 }
 
 .debug {
-    outline: solid 1px red;
     outline-offset: -1px;
-}
-
-.grid {
-    display: flex;
-    flex-wrap: wrap;
-    
-    &.margin {
-        background: rgba(orange, .2);
-        margin: -.5em;
-
-        > * {
-            margin: .5em;
-        }
-    }
-
-    &.gap {
-        background: rgba(red, .2);
-        gap: 1em;
-    }
-
-    > * {
-        @extend .debug;
-        flex: 1 1 10em;
-        padding: 2em;
-    }
-}
-
-.spacer {
-    height: 3em;
+    outline: solid 1px red;
 }
