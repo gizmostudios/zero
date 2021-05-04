@@ -1,0 +1,20 @@
+.site-logo {
+    @extend .u-flex-center;
+    background: $primary;
+    width: $header-height-sm - $spacing-sm;
+    height: $header-height-sm - $spacing-sm;
+    padding: $spacing / 6;
+    margin-top: $spacing-sm / 2;
+
+    @include media-breakpoint-up(sm) {
+        width: $header-height;
+        height: $header-height;
+        padding: $spacing / 4;
+        margin: 0;
+    }
+
+    .site-logo__image {
+        width: 100%;
+        height: 100%;
+    }
+}

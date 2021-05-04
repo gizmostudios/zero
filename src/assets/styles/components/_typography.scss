@@ -1,0 +1,27 @@
+body {
+    font-family: $font-family-primary;
+    font-weight: $font-weight-base;
+    color: $main-color;
+}
+
+.title {
+    font-weight: $font-weight-title;
+
+    &.title--narrow {
+        max-width: 25%;
+    }
+
+    &.title--h0 {
+        text-transform: uppercase;
+        font-size: $h0-size-sm;
+
+        @include media-breakpoint-up(sm) {
+            font-size: $h0-size;
+        }
+    }
+
+    &.title--h1 {
+        text-transform: uppercase;
+        font-size: $h1-size;
+    }
+}

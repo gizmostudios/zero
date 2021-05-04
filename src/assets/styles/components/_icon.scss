@@ -1,0 +1,52 @@
+.icon {
+    font-style: normal;
+    display: inline-block;
+    position: relative;
+    color: currentColor;
+}
+
+.icon--search {
+    &::before {
+        content: '';
+        display: block;
+        width: 1em;
+        height: 1em;
+        border: solid 0.125rem currentColor;
+        border-radius: 50%;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        margin: -0.15rem;
+        width: 0.125rem;
+        height: 0.5rem;
+        background: currentColor;
+        transform: rotate(-45deg);
+        transform-origin: bottom right;
+    }
+}
+
+.icon--hamburger {
+    width: 1em;
+    height: 0.1em;
+    background: currentColor;
+    position: relative;
+
+    &:before, &:after {
+        content: "";
+        height: inherit;
+        width: inherit;
+        background: currentColor;
+        position: absolute;
+        left: 0;
+    }
+
+    &:before {
+        top: -0.5em;
+    }
+    &:after {
+        bottom: -0.5em;
+    }
+}

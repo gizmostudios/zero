@@ -1,4 +1,9 @@
 extends layouts/default.pug
 
+block hero
+    include includes/hero.pug
+
 block content
-    h1.debug=title
+    .container
+        .u-spacer
+            span Page content

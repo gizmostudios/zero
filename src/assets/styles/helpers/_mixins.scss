@@ -1,0 +1,9 @@
+﻿@mixin list-unstyled() {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+@mixin debug($color:red) {
+	outline: solid 1px rgba($color, .5);
+}

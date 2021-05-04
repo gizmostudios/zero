@@ -1,0 +1,24 @@
+.header {    
+    background: $overlay-color;
+    height: $header-height-sm;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    border-bottom: solid 1px $border-color;
+
+    @include media-breakpoint-up(sm) {
+        height: $header-height;
+    }
+
+    &.is-open {
+        z-index: 999;
+        overflow: visible;
+
+        .nav__item {
+            > * {
+                color: $primary;
+            }
+        }
+    }
+}

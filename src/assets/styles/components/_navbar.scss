@@ -1,0 +1,91 @@
+.navbar {
+    width: 70%;
+    height: 100vh;
+    background: $main-bg;
+    position: fixed;
+    right: 0;
+    transform: translateX(100%);
+    transition: transform $animation;
+
+    @include media-breakpoint-up(sm) {   
+        position: initial;
+        height: unset; 
+        left: 0; 
+        width: 100%;
+        transform: translateX(0);
+        min-height: $header-height;
+        border-bottom: solid 1px $border-color;    
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .nav__mobile {
+            display: none;
+        }
+    }
+
+    &.navbar--jumbo {
+        padding: $spacing * 2 0;
+    }
+}
+
+.navbar__brand {
+    flex: none;
+}
+
+.navbar__nav {
+    @include media-breakpoint-up(sm) {
+        display: flex;
+        flex: auto;
+        justify-content: center;
+    }    
+
+    &.navbar__nav--list {
+        flex-direction: column;
+
+        .nav__title,
+        .nav__item {
+            > * {
+                height: unset;
+                padding: $spacing / 3 0;
+            }
+        }
+
+        .nav__item {
+            > * {
+                color: $sub-color;
+            }
+        }
+    }
+}
+
+.navbar__end {
+    @extend .u-flex-center;
+    flex: none;
+}
+
+.nav__title {
+    font-size: $h4-size;
+    color: $primary;
+}
+
+.nav__title,
+.nav__item {
+    display: flex;
+
+    > * {
+        display: flex;
+        align-items: center;
+        padding: 0 $spacing;
+
+        &.item__button {
+            padding: 0 $spacing / 2;
+        }
+
+        @include media-breakpoint-up(sm) {
+            height: $header-height;
+        }
+    }
+}

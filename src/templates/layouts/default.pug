@@ -2,12 +2,26 @@ html
     head
         title=title
         meta(name="viewport" content="width=device-width")
+
         block styles
-            link(rel="stylesheet" href="assets/styles/bundle.css")
-    body
-        block content
+            link(rel="stylesheet" href="assets/styles/style.css")
+
+    body.has-header
+
+        // Header
+        block header
+            include ../includes/header.pug
+
+        // Page Contents
+        .page-contents
+            block hero
+            block content
+
+        // Footer
         block footer
-            footer
-                span Made by #{author}
+            include ../includes/footer.pug
+
+        // Scripts
         block scripts
-            script(src="http://localhost:35729/livereload.js")
+            script(src="assets/scripts/main.js")
+            script(src=`http://localhost:${liveReloadPort}/livereload.js`)

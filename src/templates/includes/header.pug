@@ -1,0 +1,58 @@
+header.header.is-open(role="banner")
+
+    // Main Navbar
+    nav.navbar.navbar--main
+        .container
+
+            // Navbar brand
+            .navbar__brand
+                a(href="/" title="Home" alt="Home")
+                    include logo.pug
+
+            // Navbar nav
+            ul.navbar__nav
+                li.nav__item
+                    a.item__link(href="#") ik & werk
+                li.nav__item
+                    a.item__link(href="#") series
+                li.nav__item
+                    a.item__link(href="#") onderwerpen
+            
+            // Navbar end
+            ul.navbar__end
+                li.nav__item
+                    a.item__link(href="#")
+                        i.icon.icon--search
+                li.nav__item.nav__mobile
+                    button.btn.item__button
+                        i.icon.icon--hamburger
+
+    // Sub Navbar
+    nav.navbar
+        .container
+            ul.navbar__nav
+                li.nav__item
+                    a.item__link(href="#") jezelf ontwikkelen
+                li.nav__item
+                    a.item__link(href="#") succesvoller solliciteren
+                li.nav__item
+                    a.item__link(href="#") werk vinden
+                li.nav__item
+                    a.item__link(href="#") uitkering
+
+    // Sub-sub Navbar
+    nav.navbar.navbar--jumbo
+        .container
+            each column in [1, 2, 3, 4, 5]
+                ul.navbar__nav.navbar__nav--list
+                    li.nav__title
+                        h3.title menu #{column}
+                    li.nav__item
+                        a(href="#") Menu item level 4
+                    li.nav__item
+                        a(href="#") Menu item level 4
+                    li.nav__item
+                        a(href="#") Menu item level 4
+                    li.nav__item
+                        a(href="#") Menu item level 4
+            

@@ -1,0 +1,126 @@
+files:
+  include: src/assets/styles/*.scss
+  ignore:
+    - src/assets/styles/style.scss
+    - src/assets/styles/base/_reboot.scss
+    - src/assets/styles/utilities/_utilities.scss
+    - src/assets/styles/helpers/_functions.scss
+    - src/assets/styles/lib/**/*.*
+    - src/assets/styles/print.scss
+options:
+  formatter: stylish
+  merge-default-rules: false
+rules:
+  attribute-quotes:
+    - 1
+    - include: true
+  bem-depth:
+    - 2
+    - max-depth: 1
+  border-zero: 0
+  brace-style:
+    - 1
+    - style: '1tbs'
+    - allow-single-line: true
+  class-name-format:
+    - 2
+    - convention: hyphenatedbem
+  clean-import-paths: 0
+  declarations-before-nesting: 1
+  empty-args: 0
+  empty-line-between-blocks:
+    - 1
+    - include: true
+    - allow-single-line-rulesets: true
+  extends-before-declarations: 1
+  extends-before-mixins: 1
+  final-newline: 0
+  force-attribute-nesting: 1
+  force-element-nesting: 1
+  force-pseudo-nesting: 1
+  function-name-format: 0
+  hex-length: 0
+  hex-notation: 0
+  id-name-format: 0
+  indentation: 0
+  leading-zero: 0
+  max-file-line-count: 0
+  max-line-length: 0
+  mixin-name-format: 0
+  mixins-before-declarations:
+    - 1
+    - exclude: ['media-breakpoint-up', 'media-breakpoint-down', 'media-breakpoint-only', 'media-breakpoint-between']
+  nesting-depth:
+    - 2
+    - max-depth: 3
+  no-at-rule-vendor-prefix: 0
+  no-attribute-selectors: 0
+  no-color-hex: 0
+  no-color-keywords: 1
+  no-color-literals: 0
+  no-combinators: 0
+  no-css-comments: 0
+  no-debug: 0
+  no-duplicate-properties:
+  - 2
+  - exclude:
+      - flex
+  no-empty-rulesets: 1
+  no-extends: 0
+  no-ids: 2
+  no-important: 1
+  no-invalid-hex: 2
+  no-media-feature-vendor-prefix: 0
+  no-mergeable-selectors: 0
+  no-misspelled-properties:
+    - 2
+    - extra-properties: []
+  no-vendor-prefixes:
+    - 1
+    - ignore-non-standard: true
+  no-qualifying-elements: 0
+  no-trailing-zero: 0
+  no-transition-all: 0
+  no-universal-selectors: 0
+  no-url-domains: 1
+  no-url-protocols: 0
+  no-value-vendor-prefix: 0
+  no-warn: 0
+  one-declaration-per-line: 1
+  placeholder-in-extend: 0
+  placeholder-name-format: 0
+  property-sort-order: 0
+  property-units: 0
+  pseudo-element: 0
+  quotes:
+    - 1
+    - style: double
+  shorthand-values: 0
+  single-line-per-selector: 1
+  space-after-bang:
+    - 1
+    - include: false
+  space-after-colon: 0
+  space-after-comma: 0
+  space-around-operator:
+    - 1
+    - include: true
+  space-before-bang:
+    - 1
+    - include: true
+  space-before-brace:
+    - 1
+    - include: true
+  space-before-colon:
+    - 1
+    - include: false
+  space-between-parens: 0
+  trailing-semicolon:
+    - 1
+    - include: true
+  url-quotes: 1
+  variable-for-property: 0
+  variable-name-format:
+    - 1
+    - convention: hyphenatedlowercase
+  zero-unit: 0

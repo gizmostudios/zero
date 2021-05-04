@@ -1,0 +1,30 @@
+{
+	"Bootstrap media breakpoint": {
+		"scope": "scss",
+		"prefix": "bpoint",
+		"body": [
+			"@include media-breakpoint-up(sm) {\n\t$1\n}"
+		]
+	},
+	"debug": {
+		"scope": "scss",
+		"prefix": "debug",
+		"body": [
+			"@extend .debug;"
+		]
+	},
+	"SASS-LINT ignore": {
+		"scope": "scss",
+		"prefix": "ignore",
+		"body": [
+			"//sass-lint:disable-line $1"
+		]
+	},
+	"console.log": {
+		"scope": "js",
+		"prefix": "log",
+		"body": [
+			"console.log($1);"
+		]
+	}
+}

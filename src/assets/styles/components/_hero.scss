@@ -1,0 +1,13 @@
+.hero {
+    display: flex;
+    align-items: center;
+    height: $hero-height-sm;
+    
+    .title {
+        color: $main-color-inverted;
+    }
+
+    @include media-breakpoint-up(sm) {
+        height: $hero-height;
+    }
+}
