@@ -7,13 +7,19 @@
     overflow: hidden;
     border-bottom: solid 1px $border-color;
 
+    .nav__item {
+        @include debug;
+        height: $header-height-sm;
+    }
+
     @include media-breakpoint-up(sm) {
         height: $header-height;
     }
 
     &.is-open {
         z-index: 999;
-        overflow: visible;
+        // overflow: visible;
+        background: $main-bg;
 
         .nav__item {
             > * {
