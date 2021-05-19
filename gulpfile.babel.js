@@ -8,16 +8,18 @@ import sass from 'gulp-dart-sass';
 import sassLint from 'gulp-sass-lint';
 import server from 'gulp-webserver';
 import sourcemaps from 'gulp-sourcemaps';
+import checkCSS from 'gulp-check-unused-css';
 
 const config = {
 	serverPort: 8080,
 	liveReloadPort: 8081
 };
 
+// @TODO: move to src/templateData.json and import
 const templatesData = {
 	liveReloadPort: config.liveReloadPort,
-	title: 'UWV Content Platform',
-	author: 'elbert4net',
+	title: 'B',
+	author: 'bert',
 };
 
 const paths = {
@@ -55,7 +57,7 @@ gulp.task('templates', () => {
 		.pipe(livereload());
 });
 
-gulp.task('images', function () {
+gulp.task('images', () => {
     return gulp.src(paths.images.src)
         .pipe(imagemin({
             interlaced: true
@@ -76,7 +78,14 @@ gulp.task('styles', () => {
 		.pipe(livereload());
 });
 
-gulp.task('scripts', function () {
+gulp.task('sanity-check', () => {
+	return gulp.src([`${paths.styles.dist}*.css`, `${paths.dist}*.html`])
+		.pipe(checkCSS({
+			globals: ['bootstrap@3.2.0']
+		}));
+});
+
+gulp.task('scripts', () => {
     return gulp.src(paths.scripts.src)
         .pipe(sourcemaps.init())
         .pipe(concat('main.js'))

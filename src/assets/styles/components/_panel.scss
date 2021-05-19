@@ -1,0 +1,14 @@
+.panel {
+    border: $border-default;
+    border-color: $border-color-inverted;
+    border-radius: $border-radius;
+    margin: $spacing-sm;
+    padding: $spacing-sm;
+    background: $main-bg;
+    box-shadow: $box-shadow;
+    
+    @include media-breakpoint-up(sm) {
+        margin: $spacing;
+        padding: $spacing;
+    }
+}

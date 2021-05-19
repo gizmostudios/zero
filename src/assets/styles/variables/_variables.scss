@@ -1,29 +1,31 @@
 // =========
 // Colors
 // =========
-$primary:					#0177D1;
+$primary:					#a03;
 $secondary:					#023280;
 $black:						#000;
-$coal: 						#444;
+$coal: 						#333;
+$silver: 					#AAA;
 $white: 					#FFF;
 
 // Text
-$main-color:				$black;
-$main-color-inverted:		$white;
-$sub-color:					$coal;
+$main-color:				$white;
+$main-color-inverted:		$black;
+$sub-color:					$silver;
 $overlay-color: 			rgba($black, 0.3);
 $border-color:              rgba($black, 0.5);
 $border-color-inverted:     rgba($white, 0.5);
 
 // Backgrounds
-$main-bg:   				$white;
-$inverted-bg:   			$coal;
+$main-bg:   				$coal;
+$inverted-bg:   			$white;
 
 // =========
 // Decorations
 // =========
 $box-shadow: 0 0.5em 4em 0 rgba(0,0,0,0.15);
 $border-radius: 0.75em;
+$border-default: solid 1px $border-color;
 
 // =========
 // Animation
@@ -73,6 +75,9 @@ $header-height-sm: 			4.75em;
 $header-height: 			5.625em;
 $hero-height-sm: 			30em;
 $hero-height: 				40em;
+
+// Levels
+$z-index-max: 9999;
 
 $grid-breakpoints: (
 	xs: 0,

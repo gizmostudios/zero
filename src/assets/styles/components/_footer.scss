@@ -1,15 +1,20 @@
 .footer {
     background: $primary;
-    color: $main-color-inverted;
+    color: $main-color;
+    border-top: solid 1px $border-color-inverted;
 
     .container {   
-        padding: $spacing * 3 0;
+        padding-top: $spacing * 3;
+        padding-bottom: $spacing * 3;
     }
 }
 
 .footer__sub {
-    border-top: solid 1px $border-color-inverted;
+    border-top: solid 1px $border-color;
+    background: $overlay-color;
+
     .container {
-        padding: $spacing 0;
+        padding-top: $spacing;
+        padding-bottom: $spacing;
     }
 }

@@ -1,7 +1,9 @@
 .hero {
+    background-size: cover;
     display: flex;
     align-items: center;
     height: $hero-height-sm;
+    border-bottom: solid 1px $border-color;
     
     .title {
         color: $main-color-inverted;

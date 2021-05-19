@@ -22,6 +22,7 @@
     "babel-preset-es2015": "^6.24.1",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
+    "gulp-check-unused-css": "^2.1.4",
     "gulp-cli": "^2.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-dart-sass": "^1.0.2",

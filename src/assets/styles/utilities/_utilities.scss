@@ -251,20 +251,6 @@
 	}
 }
 
-
-// =========
-// Misc
-// =========
-.u-text-white {
-	color: #fff !important;
-}
-.u-text-dark-grey {
-	color: #383837 !important;
-}
-.u-text-black {
-	color: #000000 !important;
-}
-
 .u-text-center-vert {
 	display: flex;
 	align-items: center;
@@ -273,17 +259,6 @@
 .u-text-center-horz {
 	display: flex;
 	justify-content: center;
-}
-
-
-.u-block-link {
-	display: block;
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: 1;
 }
 
 .u-spacer {

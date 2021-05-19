@@ -1,10 +1,9 @@
 .site-logo {
     @extend .u-flex-center;
     background: $primary;
-    width: $header-height-sm - $spacing-sm;
-    height: $header-height-sm - $spacing-sm;
+    width: $header-height-sm;
+    height: $header-height-sm;
     padding: $spacing / 6;
-    margin-top: $spacing-sm / 2;
 
     @include media-breakpoint-up(sm) {
         width: $header-height;
