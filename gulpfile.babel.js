@@ -48,4 +48,4 @@ gulp.task('watch', () => {
 });
 
 gulp.task('build', gulp.parallel('pug', 'scss'));
-gulp.task('default', gulp.parallel('server', 'watch'));
+gulp.task('default', gulp.series('pug', 'scss', 'server', 'watch'));

@@ -1,0 +1,12 @@
+@use '../config/variables';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: variables.$body-color-bg;
+    color: variables.$body-color-text;
+    margin: variables.$spacing;
+    font-family: sans-serif;
+}

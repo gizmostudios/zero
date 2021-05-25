@@ -1,15 +1,5 @@
-* {
-    box-sizing: border-box;
-}
+// Base
+@use 'base/layout';
 
-body {
-    background: white;
-    color: black;
-    font-family: sans-serif;
-    margin: 0;
-}
-
-.debug {
-    outline-offset: -1px;
-    outline: solid 1px red;
-}
+// Components
+@use 'components/footer';
