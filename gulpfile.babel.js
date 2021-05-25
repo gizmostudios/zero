@@ -47,4 +47,5 @@ gulp.task('watch', () => {
 	gulp.watch(paths.scss, gulp.series('scss'));
 });
 
-gulp.task('default', gulp.series('server', 'watch'));
+gulp.task('build', gulp.parallel('pug', 'scss'));
+gulp.task('default', gulp.parallel('server', 'watch'));
